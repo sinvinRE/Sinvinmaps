@@ -94,7 +94,7 @@
       
       <div class="right">
         
-	<img width="20" height="20" src="https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/38671277-8a7d-4f73-ac4c-c957915e15cb/Green+Marker.png">
+		<img width="20" height="20" src="https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/38671277-8a7d-4f73-ac4c-c957915e15cb/Green+Marker.png">
 		 <input type='checkbox' id="Aesop" value='Aesop' onclick="showhideMarkers(this)" checked /><label for="Aesop"> Aesop </label><br>
 		 <img width="20" height="20" src="https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/7cb4b5d7-aeec-4bff-9f16-4b83086e79dd/Red+Marker+.png">
         <input type='checkbox' id="LeLabo" value='LeLabo' onclick="showhideMarkers(this)" checked /><label for="LeLabo"> Le Labo</label><br>
@@ -123,6 +123,8 @@ var markers = [];
 var map;
 var infowindow;
 var selectedmarker;
+
+//Icons for th
 var aesopIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/38671277-8a7d-4f73-ac4c-c957915e15cb/Green+Marker.png";
 var lelaboIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/7cb4b5d7-aeec-4bff-9f16-4b83086e79dd/Red+Marker+.png";
 var diptIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/bf97084d-56aa-49f8-9161-39ac39cccf82/Purple+Marker.png";
@@ -280,7 +282,9 @@ function initMap() {
                 '<br/><b>LL Size: </b>' + store["LL Size"] + '<br>' +
                 '<br/><b>Total Size: </b>' + store["Total Size"] + '<br>' +
                 '<br/><b>Asking Rent Per Month: </b>' + store["Asking Rent Per Month"] + '<br>' +
-                '<br/><b>Asking Rent Per Year: </b>' + store["Asking Rent Per Year"]   );
+                '<br/><b>Asking Rent Per Year: </b>' + store["Asking Rent Per Year"] +
+				'<br/><b>Notes: </b>' + store["Notes"] 
+				);
 							  
 			}else{
 			
@@ -291,7 +295,9 @@ function initMap() {
                 '<br/><b>LL Size: </b>' + store["LL Size"] + '<br>' +
                 '<br/><b>Total Size: </b>' + store["Total Size"] + '<br>' +
                 '<br/><b>Asking Rent Per Month: </b>' + store["Asking Rent Per Month"] + '<br>' +
-                '<br/><b>Asking Rent Per Year: </b>' + store["Asking Rent Per Year"]   );
+                '<br/><b>Asking Rent Per Year: </b>' + store["Asking Rent Per Year"] + 
+				'<br/><b>Notes: </b>' + store["Notes"] 
+				);
 			
 			}
 
