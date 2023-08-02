@@ -8,95 +8,15 @@ var storeJson = [
         "Longitude": -73.96898451166297
     },
     {
-        "Brand": "Aesop",
+        "Brand": "Lora Piana",
         "Neighborhood": "Soho",
         "Address": "438 West Broadway",
-        "Full Address": "438 W Broadway, New York, NY 10012",
-        "Latitude": 40.7256846,
-        "Longitude": -74.0011731
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "Nolita",
-        "Address": "226 Elizabeth Street",
-        "Full Address": "226 Elizabeth St, New York, NY 10012",
-        "Latitude": 40.7229112,
-        "Longitude": -73.9939611
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "West Village",
-        "Address": "341 Bleecker Street",
-        "Full Address": "341 Bleecker St, New York, NY 10014",
-        "Latitude": 40.7337503,
-        "Longitude": -74.004294
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "University Place",
-        "Address": "60 University Pl",
-        "Full Address": "60 University Pl, New York, NY 10003",
-        "Latitude": 40.732917,
-        "Longitude": -73.993894
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "Meatpacking",
-        "Address": "60 Gransevoort St",
-        "Full Address": "60 Gansevoort St, New York, NY 10014",
-        "Latitude": 40.739295,
-        "Longitude": -74.0072596
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "Downtown Brooklyn",
-        "Address": "57 Bergen Street",
-        "Full Address": "57 Bergen St, Brooklyn, NY 11201",
-        "Latitude": 40.6871314,
-        "Longitude": -73.9909719
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "Chelsea",
-        "Address": "175 9th Ave",
-        "Full Address": "174 9th Ave, New York, NY 10011",
-        "Latitude": 40.7449531,
-        "Longitude": -74.0021729
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "Williamsburg",
-        "Address": "85 North 3rd St",
-        "Full Address": "85 N 3rd St, Brooklyn, NY 11249",
-        "Latitude": 40.7171941,
-        "Longitude": -73.9623448
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "Park Slope",
-        "Address": "225 5th Ave",
-        "Full Address": "225 5th Ave, Brooklyn, NY 11215",
-        "Latitude": 40.6755787,
-        "Longitude": -73.9806843
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "Upper West Side",
-        "Address": "219 Columbus Ave",
-        "Full Address": "219 Columbus Ave, New York, NY 10023",
-        "Latitude": 40.7758857,
-        "Longitude": -73.9795365
-    },
-    {
-        "Brand": "Aesop",
-        "Neighborhood": "Madison Ave",
-        "Address": "1070 Madison Ave",
-        "Full Address": "1070 Madison Ave, New York, NY 10028",
-        "Latitude": 40.7775885,
-        "Longitude": -73.961402
+        "Full Address": "3 9th Ave, New York, NY 10014",
+        "Latitude": 40.73959278859194, 
+        "Longitude": -74.00667584963361
     },
 	{
-        "Brand": "Le Labo",
+        "Brand": "Brunello Cucinelli",
         "Neighborhood": "Nolita",
         "Address": "229 Elizabeth Street",
         "Full Address": "229 Elizabeth St, New York, NY 10012",
@@ -104,12 +24,12 @@ var storeJson = [
         "Longitude": -73.9941825
     },
     {
-        "Brand": "Le Labo",
+        "Brand": "Brunello Cucinelli",
         "Neighborhood": "FiDi",
         "Address": "65D Wall Street",
         "Full Address": "65d Wall St, New York, NY 10005",
-        "Latitude": 40.7056305,
-        "Longitude": -74.0087789
+        "Latitude": 40.725589402321816,
+        "Longitude": -73.99867874585277
     },
     {
         "Brand": "Le Labo",
