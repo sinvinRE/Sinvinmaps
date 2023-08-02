@@ -1,11 +1,11 @@
 var storeJson = [
     {
-        "Brand": "Aesop",
+        "Brand": "Lora Piana",
         "Neighborhood": "World Trade Center",
-        "Address": "185 Greenwich Street",
-        "Full Address": "185 Greenwich St, New York, NY 10007",
-        "Latitude": 40.7115663,
-        "Longitude": -74.0114261
+        "Address": "784 Madison",
+        "Full Address": "748 Madison Ave, New York, NY 10065",
+        "Latitude": 40.767286302901226,
+        "Longitude": -73.96898451166297
     },
     {
         "Brand": "Aesop",
