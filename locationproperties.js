@@ -528,36 +528,6 @@ var storeJson = [
         "Brand": "Properties"
     },
     {
-        "Neighborhood": "West Village",
-        "Full Address": "501 Hudson St, New York, NY 10014",
-        "Address": "501 Hudson",
-        "GF Size": 777,
-        "LL Size": "",
-        "Total Size": 777,
-        "Asking Rent Per Month": " $ 17,500 ",
-        "Asking Rent Per Year": " $ 210,000 ",
-        "Notes": "",
-        "Image": "",
-        "Latitude": 40.7331307,
-        "Longitude": -74.0066255,
-        "Brand": "Properties"
-    },
-    {
-        "Neighborhood": "Nolita",
-        "Full Address": "262 Mott St, New York, NY 10012",
-        "Address": "262 Mott",
-        "GF Size": 673,
-        "LL Size": "",
-        "Total Size": 673,
-        "Asking Rent Per Month": " $ 12,382 ",
-        "Asking Rent Per Year": " $ 148,584 ",
-        "Notes": "CONFRIMING STATUS",
-        "Image": "",
-        "Latitude": 40.7238412,
-        "Longitude": -73.9942513,
-        "Brand": "Properties"
-    },
-    {
         "Neighborhood": "Upper East Side",
         "Full Address": "905 Madison Ave, New York, NY 10021",
         "Address": "905 Madison",
