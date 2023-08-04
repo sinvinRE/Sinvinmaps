@@ -40,12 +40,12 @@ var storeJson = [
         "Longitude": -73.97012463722066
     },
     {
-        "Brand": "Le Labo",
+        "Brand": "Zegna",
         "Neighborhood": "Midtown East",
         "Address": "611 5th Ave",
-        "Full Address": "611 5th Ave, New York, NY 10022",
-        "Latitude": 40.7581047,
-        "Longitude": -73.9769487
+        "Full Address": "265 Lafayette St, New York, NY 10012",
+        "Latitude": 40.72612047791016,
+        "Longitude": -73.9962071040904
     },
     {
         "Brand": "Le Labo",
