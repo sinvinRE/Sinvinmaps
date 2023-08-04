@@ -127,7 +127,7 @@ var selectedmarker;
 //Icons for th
 var lorapianaIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/38671277-8a7d-4f73-ac4c-c957915e15cb/Green+Marker.png";
 var brunellocucinelliIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/7cb4b5d7-aeec-4bff-9f16-4b83086e79dd/Red+Marker+.png";
-var diptIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/bf97084d-56aa-49f8-9161-39ac39cccf82/Purple+Marker.png";
+var zegnaIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/bf97084d-56aa-49f8-9161-39ac39cccf82/Purple+Marker.png";
 var kitonIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/a4cf64ce-986a-477a-9cd4-47dfff0e85a4/Orange+Marker.png";
 var propertiesIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/fd04f87d-68fe-483c-a2ad-4095788b9227/Blue+marker.png";
 
@@ -136,7 +136,7 @@ var propertiesIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e5
 var availableBreweries = [];
 var lorapianaMarkers = [];
 var BrunelloCucinelliMarkers = [];
-var diptMarkers = [];
+var zegnatMarkers = [];
 var kitonMarkers = [];
 var propMarkers = [];
 
@@ -212,9 +212,9 @@ function initMap() {
 			lelaboMarkers.push(marker);
 			
 		}
-		else if(store['Brand'] == 'Diptyque'){
+		else if(store['Brand'] == 'zegna'){
 			icon = {
-				url: diptIcon, // url
+				url: zegnatIcon, // url
 				scaledSize: new google.maps.Size(35, 35), // scaled size
 
 			};
@@ -230,7 +230,7 @@ function initMap() {
 				neighhood: store["Neighborhood"]
 				
 			});
-			diptMarkers.push(marker)
+			zegnatMarkers.push(marker)
 		}
 		else if(store['Brand'] == 'kiton'){
 			icon = {
@@ -355,13 +355,13 @@ function showhideMarkers(radio){
 	
 		if (document.getElementById('zegna').checked) 
 		  {
-			  for(i = 0; i < diptMarkers.length; i++){
-				diptMarkers[i].setVisible(true);
+			  for(i = 0; i < zegnatMarkers.length; i++){
+				zegnatMarkers[i].setVisible(true);
 			  
 			  }
 		  } else {
 			  for(i = 0; i < zegnaMarkers.length; i++){
-				diptMarkers[i].setVisible(false);
+				zegnaMarkers[i].setVisible(false);
 			  
 			  }
 		  }
