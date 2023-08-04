@@ -48,28 +48,20 @@ var storeJson = [
         "Longitude": -73.9962071040904
     },
     {
-        "Brand": "Le Labo",
+        "Brand": "Zegna",
         "Neighborhood": "Upper East Side",
         "Address": "1000 Third Ave 59th Street",
-        "Full Address": "59th Street and, 1000 Third Avenue, Lexington Ave, New York, NY 10022",
-        "Latitude": 40.7622235,
-        "Longitude": -73.9671512
+        "Full Address": "200 Vesey St Suite 198, New York, NY 10281",
+        "Latitude": 40.71673697871075,
+        "Longitude": -74.01445270186552
     },
     {
-        "Brand": "Le Labo",
-        "Neighborhood": "Upper East Side",
-        "Address": "22 East 65th Street",
-        "Full Address": "22 E 65th St, New York, NY 10065",
-        "Latitude": 40.7673861,
-        "Longitude": -73.9690277
-    },
-    {
-        "Brand": "Le Labo",
-        "Neighborhood": "Columbus Circle",
-        "Address": "235 West 57th Street",
-        "Full Address": "235 W 57th St, New York, NY 10019",
-        "Latitude": 40.76665,
-        "Longitude": -73.9821015
+        "Brand": "Zegna",
+        "Neighborhood": "5th Ave",
+        "Address": "611 5th Ave, New York, NY 10022",
+        "Full Address": "4 W 57th St, New York, NY 10019",
+        "Latitude": 40.76337996944491,
+        "Longitude": -73.97463840773136
     },
 	{
         "Brand": "Diptyque",
