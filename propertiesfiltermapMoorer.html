@@ -126,9 +126,9 @@ var selectedmarker;
 
 //Icons for th
 var lorapianaIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/38671277-8a7d-4f73-ac4c-c957915e15cb/Green+Marker.png";
-var BrunelloCucinelliIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/7cb4b5d7-aeec-4bff-9f16-4b83086e79dd/Red+Marker+.png";
+var brunellocucinelliIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/7cb4b5d7-aeec-4bff-9f16-4b83086e79dd/Red+Marker+.png";
 var diptIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/bf97084d-56aa-49f8-9161-39ac39cccf82/Purple+Marker.png";
-var warbyIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/a4cf64ce-986a-477a-9cd4-47dfff0e85a4/Orange+Marker.png";
+var kitonIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/a4cf64ce-986a-477a-9cd4-47dfff0e85a4/Orange+Marker.png";
 var propertiesIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/fd04f87d-68fe-483c-a2ad-4095788b9227/Blue+marker.png";
 
 
@@ -137,7 +137,7 @@ var availableBreweries = [];
 var lorapianaMarkers = [];
 var BrunelloCucinelliMarkers = [];
 var diptMarkers = [];
-var warbyMarkers = [];
+var kitonMarkers = [];
 var propMarkers = [];
 
 function initMap() {
@@ -232,9 +232,9 @@ function initMap() {
 			});
 			diptMarkers.push(marker)
 		}
-		else if(store['Brand'] == 'Warby Parker'){
+		else if(store['Brand'] == 'kiton'){
 			icon = {
-				url: warbyIcon, // url
+				url: kitonIcon, // url
 				scaledSize: new google.maps.Size(35, 35), // scaled size
 
 			};
@@ -250,7 +250,7 @@ function initMap() {
 				neighhood: store["Neighborhood"]
 				
 			});
-			warbyMarkers.push(marker);
+			kitonMarkers.push(marker);
 			
 		}else if(store['Brand'] == 'Properties'){
 			icon = {
@@ -335,9 +335,9 @@ function showhideMarkers(radio){
 			  }
 		  }
 	
-	}else if(selectedId == "Brunello Cucinelli"){
+	}else if(selectedId == "brunellocucinelli"){
 	
-		if (document.getElementById('Brunello Cucinelli').checked) 
+		if (document.getElementById('brunellocucinelli').checked) 
 		  {
 			  for(i = 0; i < lelaboMarkers.length; i++){
 				lelaboMarkers[i].setVisible(true);
@@ -351,16 +351,16 @@ function showhideMarkers(radio){
 		  }
 	
 	}
-	else if(selectedId == "Zegna"){
+	else if(selectedId == "zegna"){
 	
-		if (document.getElementById('Diptique').checked) 
+		if (document.getElementById('zegna').checked) 
 		  {
 			  for(i = 0; i < diptMarkers.length; i++){
 				diptMarkers[i].setVisible(true);
 			  
 			  }
 		  } else {
-			  for(i = 0; i < diptMarkers.length; i++){
+			  for(i = 0; i < zegnaMarkers.length; i++){
 				diptMarkers[i].setVisible(false);
 			  
 			  }
@@ -369,15 +369,15 @@ function showhideMarkers(radio){
 	}
 	else if(selectedId == "Kiton"){
 	
-		if (document.getElementById('WarbyParker').checked) 
+		if (document.getElementById('kiton').checked) 
 		  {
-			  for(i = 0; i < warbyMarkers.length; i++){
-				warbyMarkers[i].setVisible(true);
+			  for(i = 0; i < kitonMarkers.length; i++){
+				kitonMarkers[i].setVisible(true);
 			  
 			  }
 		  } else {
-			  for(i = 0; i < warbyMarkers.length; i++){
-				warbyMarkers[i].setVisible(false);
+			  for(i = 0; i < kiton.length; i++){
+				kitonMarkers[i].setVisible(false);
 			  
 			  }
 		  }
