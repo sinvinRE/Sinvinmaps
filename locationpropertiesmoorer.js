@@ -15,7 +15,7 @@ var storeJson = [
         "Latitude": 40.73959278859194, 
         "Longitude": -74.00667584963361
     },
-	{
+    {
         "Brand": "Brunello Cucinelli",
         "Neighborhood": "Nolita",
         "Address": "229 Elizabeth Street",
