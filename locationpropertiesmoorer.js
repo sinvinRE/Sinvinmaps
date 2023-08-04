@@ -17,27 +17,27 @@ var storeJson = [
     },
     {
         "Brand": "Brunello Cucinelli",
-        "Neighborhood": "Nolita",
-        "Address": "229 Elizabeth Street",
-        "Full Address": "229 Elizabeth St, New York, NY 10012",
-        "Latitude": 40.722924,
-        "Longitude": -73.9941825
+        "Neighborhood": "Soho",
+        "Address": "136 Greene St, New York, NY 10012",
+        "Full Address": "136 Greene St, New York, NY 10012",
+        "Latitude": 40.725493117667654,
+        "Longitude": -73.99840458766556
     },
     {
         "Brand": "Brunello Cucinelli",
-        "Neighborhood": "FiDi",
+        "Neighborhood": "Meatpacking",
         "Address": "65D Wall Street",
-        "Full Address": "65d Wall St, New York, NY 10005",
-        "Latitude": 40.725589402321816,
-        "Longitude": -73.99867874585277
+        "Full Address": "50 Gansevoort St, New York, NY 10014",
+        "Latitude": 40.73927263199088, 
+        "Longitude": -74.0068547576626
     },
     {
-        "Brand": "Le Labo",
-        "Neighborhood": "NoMad",
+        "Brand": "Brunello Cucinelli",
+        "Neighborhood": "Madison",
         "Address": "14 West 29th Street",
         "Full Address": "14 W 29th St, New York, NY 10001",
-        "Latitude": 40.7455528,
-        "Longitude": -73.9879782
+        "Latitude": 40.765589454843564,
+        "Longitude": -73.97012463722066
     },
     {
         "Brand": "Le Labo",
