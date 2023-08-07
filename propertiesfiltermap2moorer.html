@@ -95,7 +95,7 @@
       <div class="right">
         
 		<img width="20" height="20" src="https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/38671277-8a7d-4f73-ac4c-c957915e15cb/Green+Marker.png">
-		 <input type='checkbox' id="Aesop" value='Aesop' onclick="showhideMarkers(this)" checked /><label for="Aesop"> Aesop </label><br>
+		 <input type='checkbox' id="Lora Piana" value='Lora Piana' onclick="showhideMarkers(this)" checked /><label for="Lora Piana"> Lora Piana </label><br>
 		 <img width="20" height="20" src="https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/7cb4b5d7-aeec-4bff-9f16-4b83086e79dd/Red+Marker+.png">
         <input type='checkbox' id="LeLabo" value='LeLabo' onclick="showhideMarkers(this)" checked /><label for="LeLabo"> Le Labo</label><br>
 		<img width="20" height="20" src="https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/bf97084d-56aa-49f8-9161-39ac39cccf82/Purple+Marker.png">
@@ -125,7 +125,7 @@ var infowindow;
 var selectedmarker;
 
 //Icons for th
-var aesopIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/38671277-8a7d-4f73-ac4c-c957915e15cb/Green+Marker.png";
+var lorapianaIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/38671277-8a7d-4f73-ac4c-c957915e15cb/Green+Marker.png";
 var lelaboIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/7cb4b5d7-aeec-4bff-9f16-4b83086e79dd/Red+Marker+.png";
 var diptIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/bf97084d-56aa-49f8-9161-39ac39cccf82/Purple+Marker.png";
 var warbyIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/a4cf64ce-986a-477a-9cd4-47dfff0e85a4/Orange+Marker.png";
@@ -134,7 +134,7 @@ var propertiesIcon = "https://images.squarespace-cdn.com/content/64c413f541fc0e5
 
 
 var availableBreweries = [];
-var aesopMarkers = [];
+var lorapianaMarkers = [];
 var lelaboMarkers = [];
 var diptMarkers = [];
 var warbyMarkers = [];
@@ -167,9 +167,9 @@ function initMap() {
 		var marker;
         
 		var addressText = store["Full Address"] + ", USA";
-		if(store['Brand'] == 'Aesop'){
+		if(store['Brand'] == 'Lora Piana'){
 			icon = {
-				url: aesopIcon, // url
+				URL: lorapianaIcon, // url
 				scaledSize: new google.maps.Size(35, 35), // scaled size
 
 			};
@@ -187,7 +187,7 @@ function initMap() {
 				
 			
 			});
-			aesopMarkers.push(marker);
+			lorapianaMarkers.push(marker);
 			
 			
 		}else if(store['Brand'] == 'Le Labo'){
@@ -321,16 +321,16 @@ function initMap() {
 
 function showhideMarkers(radio){
 	selectedId = radio.value;
-	if(selectedId == "Aesop"){
-		if (document.getElementById('Aesop').checked) 
+	if(selectedId == "Lora Piana"){
+		if (document.getElementById('Lora Piana').checked) 
 		  {
-			  for(i = 0; i < aesopMarkers.length; i++){
-				aesopMarkers[i].setVisible(true);
+			  for(i = 0; i < lorapianaMarkers.length; i++){
+				lorapianaMarkers[i].setVisible(true);
 			  
 			  }
 		  } else {
-			  for(i = 0; i < aesopMarkers.length; i++){
-				aesopMarkers[i].setVisible(false);
+			  for(i = 0; i < lorapianaMarkers.length; i++){
+				lorapianaMarkers[i].setVisible(false);
 			  
 			  }
 		  }
