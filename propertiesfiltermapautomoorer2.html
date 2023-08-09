@@ -1,0 +1,317 @@
+<html>
+
+<head>
+  <title>Store Locator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- BootStrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+ 
+  
+  
+  <style>
+    #map {
+      height: 100%;
+    }
+    
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+ 
+	
+
+#wrapper { position: relative; }
+   
+
+.sidebar {
+      
+    
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+   
+   
+    background-color: rgba(255,255,255,.9);
+   
+    display: block;
+
+    }
+
+    
+.popupimg{
+	width: 200;
+	height: 150;
+
+}
+
+
+
+.right{
+    
+    
+	padding: 10px;
+}
+
+
+
+
+	
+	@media only screen and (max-width: 480px) {
+	  .sidebar {
+		
+		position: absolute;
+		font-size: 10;
+		width: 100px;
+		height: 135px;
+		
+	  }
+	  
+	  
+	  
+	  
+	}
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- The div to hold the map -->
+  <div id="wrapper">
+  <div id="map"></div>
+  
+  <div class='sidebar' id="sidebar">
+      
+      
+      <div id="filtercontainer" class="right">
+        
+		
+    </div>
+	
+	
+	  
+    </div>
+	</div>
+	<!-- The below line is the place to link the js file-->
+  <script src="locationpropertiesauto.js"></script>
+
+  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBE2fNnqEJ5ni57VyVjs8P_w-eG7Hlt6iw&callback=initMap">
+  </script>
+  
+  <script>
+  
+var markers = [];
+var map;
+var infowindow;
+var selectedmarker;
+var brandMarkers = [];
+var propMarkers = [];
+
+for(i=0; i < allCategories.length; i++){
+
+	var checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = allCategories[i];
+    checkbox.name = allCategories[i];
+    checkbox.value = allCategories[i];
+	checkbox.checked =  true;
+	checkbox.setAttribute("onclick","showhideMarkers(this)"); 
+    var label = document.createElement('label')
+    label.htmlFor = allCategories[i];
+    label.appendChild(document.createTextNode(allCategoryLabels[i]));
+ 
+    var br = document.createElement('br');
+	var checkImg = document.createElement('img');
+	checkImg.src = allIcons[i];
+	checkImg.width = "20";
+	checkImg.height = "20";
+    var container = document.getElementById('filtercontainer');
+    container.appendChild(checkImg);
+    container.appendChild(checkbox);
+    container.appendChild(label);
+    container.appendChild(br);
+
+}
+	
+
+
+
+function initMap() {
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: {
+            lat: 40.754788433009736,   
+            lng: -73.98678043934693
+        },
+        fullscreenControl: false,
+		mapTypeControl: false,
+		clickableIcons : false,
+        
+        streetViewControl: false
+    });
+
+    var bounds = new google.maps.LatLngBounds();
+
+    infowindow = new google.maps.InfoWindow();
+
+    
+    markers = storeJson.map((store) => {
+        
+        const[lat, lng] = [store["Latitude"], store["Longitude"]]
+		var icon;
+		var marker;
+        var brandVal = store["Brand"];
+		var addressText = store["Full Address"] + ", USA";
+		
+		var indexVal = allCategories.indexOf(brandVal);
+			
+		
+		if(store['Brand'] == 'Properties'){
+			icon = {
+				url: allIcons[indexVal], // url
+				scaledSize: new google.maps.Size(35, 35), // scaled size
+
+			};
+			marker = new google.maps.Marker({
+				icon: icon,
+				position: {
+					lat,
+					lng
+				},
+				map: map,
+				address: addressText,
+				name: store["Brand"],
+				neighhood: store["Neighborhood"]
+				
+			});
+			propMarkers.push(marker);
+			marker.addListener("click", () => {
+            
+				if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+								  
+					infowindow.setContent(
+					"<img class='popupimg' src='" + store["Image"] +"' alt='' width='400' height='300'>" +
+					"<br/><br/><b>" + marker["address"] + "</b><br/>"  +
+					'<br/><b>GF Size: </b>' + store["GF Size"] + '<br>' +
+					'<br/><b>LL Size: </b>' + store["LL Size"] + '<br>' +
+					'<br/><b>Total Size: </b>' + store["Total Size"] + '<br>' +
+					'<br/><b>Asking Rent Per Month: </b>' + store["Asking Rent Per Month"] + '<br>' +
+					'<br/><b>Asking Rent Per Year: </b>' + store["Asking Rent Per Year"] + '<br>' +
+					'<br/><b>Notes: </b>' + store["Notes"] 
+					);
+								  
+				}else{
+				
+					infowindow.setContent(
+					"<img src='" + store["Image"] +"' alt='' width='400' height='300'>" +
+					"<br/><br/><b>" + marker["address"] + "</b><br/>"  +
+					'<br/><b>GF Size: </b>' + store["GF Size"] + '<br>' +
+					'<br/><b>LL Size: </b>' + store["LL Size"] + '<br>' +
+					'<br/><b>Total Size: </b>' + store["Total Size"] + '<br>' +
+					'<br/><b>Asking Rent Per Month: </b>' + store["Asking Rent Per Month"] + '<br>' +
+					'<br/><b>Asking Rent Per Year: </b>' + store["Asking Rent Per Year"] + '<br>' +
+					'<br/><b>Notes: </b>' + store["Notes"] 
+					);
+				
+				}
+
+				
+				infowindow.setPosition({ lat, lng });
+
+				infowindow.open(map, marker);
+				map.panTo(marker.getPosition());
+
+            
+            
+			}); 
+		}else{
+			icon = {
+				url: allIcons[indexVal], // url
+				scaledSize: new google.maps.Size(35, 35), // scaled size
+
+			};
+			marker = new google.maps.Marker({
+				icon: icon,
+				position: {
+					lat,
+					lng
+				},
+				map: map,
+				address: addressText,
+				name: store["Brand"],
+				neighhood: store["Neighborhood"]
+				
+				
+			
+			});
+			brandMarkers.push(marker)
+		
+		}
+        
+       
+        return marker;
+    });
+
+
+} 
+
+function showhideMarkers(radio){
+	selectedId = radio.value;
+	if(selectedId == "Properties"){
+		if (document.getElementById('Properties').checked) 
+		  {
+			  for(i = 0; i < propMarkers.length; i++){
+				propMarkers[i].setVisible(true);
+			  
+			  }
+		  } else {
+			  for(i = 0; i < propMarkers.length; i++){
+				propMarkers[i].setVisible(false);
+			  
+			  }
+		  }
+	
+	}else{
+	
+		if (document.getElementById(selectedId).checked) 
+		  {
+			  for(i = 0; i < brandMarkers.length; i++){
+				if(brandMarkers[i].name == selectedId){
+					brandMarkers[i].setVisible(true);
+				
+				}
+				
+			  
+			  }
+		  } else {
+			  for(i = 0; i < brandMarkers.length; i++){
+				if(brandMarkers[i].name == selectedId){
+					brandMarkers[i].setVisible(false);
+				
+				}
+			  
+			  }
+		  }
+	
+	}
+	
+		
+	
+
+}
+  
+  </script>
+</body>
+
+</html>
