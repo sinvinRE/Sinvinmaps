@@ -736,8 +736,8 @@ var storeJson = [
         "Latitude": 40.7242034,
         "Longitude": -73.993402,
         "Brand": "Properties"
-    },
-	{
+   },
+    {
         "Neighborhood": "Tribeca",
         "Full Address": "73 E Houston St, New York, NY 10012",
         "Address": "73 East Houston",
