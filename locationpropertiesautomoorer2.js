@@ -63,7 +63,7 @@ var storeJson = [
         "Latitude": 40.76337996944491,
         "Longitude": -73.97463840773136
     },
-	{
+	}
         "Brand": "Moncler",
         "Neighborhood": "Nolita",
         "Address": "31 Prince Street",
@@ -78,8 +78,6 @@ var storeJson = [
         "Full Address": "660 Madison Avenue, New York, NY 10012",
         "Latitude": 40.7641344700372,
         "Longitude": -73.97157234593381
-    },
-    },
     },
     {
         "Brand": "Warby Parker",
