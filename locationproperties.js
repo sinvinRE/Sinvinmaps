@@ -737,4 +737,5 @@ var storeJson = [
         "Longitude": -73.993402,
         "Brand": "Properties"
    },
-]
+];
+
