@@ -736,5 +736,20 @@ var storeJson = [
         "Latitude": 40.7242034,
         "Longitude": -73.993402,
         "Brand": "Properties"
+    },
+	{
+        "Neighborhood": "Tribeca",
+        "Full Address": "73 E Houston St, New York, NY 10012",
+        "Address": "73 East Houston",
+        "GF Size": 1,267,
+        "LL Size": 688,
+        "Total Size": 1,955,
+        "Asking Rent Per Month": " $ 33,000 ",
+        "Asking Rent Per Year": " $ 396,000 ",
+        "Notes": "Can divide the space so only $18k per month",
+        "Image": "https://images.squarespace-cdn.com/content/64c413f541fc0e544918798e/5a4f3bee-ed23-4504-baed-fcc8a61aff5a/Screen+Shot+2023-08-09+at+1.32.22+PM.png?content-type=image%2Fpng",
+        "Latitude": 40.7057252,
+        "Longitude": -74.0084333,
+        "Brand": "Properties"
     }
 ]
