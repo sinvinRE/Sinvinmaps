@@ -63,7 +63,6 @@ var storeJson = [
         "Latitude": 40.76337996944491,
         "Longitude": -73.97463840773136
     },
-
 	{
         "Brand": "Moncler",
         "Neighborhood": "Nolita",
